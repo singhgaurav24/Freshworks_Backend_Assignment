@@ -169,12 +169,7 @@ public class Operation {
             System.out.println("Caught IO Exception");
         }
     }
-    /**
-     * Returns JSONObject for Key, requested by  user
-     * @param String 
-     * @return Returns JSONObject if exists for Key , else returns null in case of exceptions
-     * @throws user defined InvalidKey exception ( No key matches the user given Key) , TimeExceeded exception (If the TimeToLive of Key is exceeded)
-     */
+    
     public JSONObject Read(String Key) throws Exception //Read method, which returns JSONObject
     {
         
