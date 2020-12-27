@@ -35,16 +35,16 @@ class ValueSizeExceeded extends Exception{
 
 
 public class Operation {
-	//private static Instrumentation instrument;
+	
     private final String FileLocation; // Making Immutable FileLocation 
    
     Operation(String path) throws JSONException {
     	FileLocation = path;
         JSONObject fill = new JSONObject();
-        fill.put(" ", " ");      //Fill JSONobject with dummy value
+        fill.put(" ", " "); 
          try (FileWriter file = new FileWriter(FileLocation,false))
         		{
-        	      file.write(fill.toString());  //Write dummy JSONObject to JSONfile to avoid file exception
+        	      file.write(fill.toString());
         	      file.close();
         		}
          catch (IOException E)
@@ -60,10 +60,10 @@ public class Operation {
     Operation() throws JSONException {
     	FileLocation = "F://Operation.JSON";
         JSONObject fill = new JSONObject();
-        fill.put(" ", " ");      //Fill JSONobject with dummy value
+        fill.put(" ", " ");      
          try (FileWriter file = new FileWriter(FileLocation,false))
         		{
-        	      file.write(fill.toString());   //Write dummy JSONObject to JSONfile to avoid file exception
+        	      file.write(fill.toString());
         	      file.close();
         		}
          catch (IOException E)
@@ -72,11 +72,8 @@ public class Operation {
          }
         
     }
-    /**
-     * Creates Entry to JSON file , accepting TimeToLive parameter
-     * @param String, JSONObject , integer
-     * @return Returns nothing
-     * @throws user defined DuplicateKey Exception ( If the entered Key already exists in the file )
+     /*
+          Creates Entry to JSON file , accepting TimeToLive parameter
      */
     public void Create(String Key, JSONObject Value, int TimeToLive) throws Exception // Create method when TimeToLive is provided
     {    
@@ -210,11 +207,8 @@ public class Operation {
         }
 		return null;
     }
-    /**
-     * Delete JSONObject for Key, requested by  user
-     * @param String 
-     * @return Returns nothing
-     * @throws user defined InvalidKey exception ( No key matches the user given Key) , TimeExceeded exception (If the TimeToLive of Key is exceeded)
+     /*
+         Delete JSONObject for Key, requested by  user
      */
     public void Delete(String Key) throws Exception // Delete method , for deleting a given < Key,JSONOBject > pair
     {
