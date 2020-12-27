@@ -6,5 +6,5 @@
 ### 2.) Add Code in eclipse workspace
 ### 3.) Add [org.json](https://github.com/singhgaurav24/Freshworks_Backend_Assignment/blob/main/Code/org.json.jar) file in project
         Steps to add org.json file in Java Eclipse Project :- 
-        Right click on the Project -> Properties -> Select Libraries tab -> Click Add External Libraries -> Select the Jar file 
+        Right click on the Project -> Properties -> Select Libraries tab -> Click Add External Libraries -> Select the Jar file -> Apply 
 ### 4.) Run the Driver.java file to perform opertions.
